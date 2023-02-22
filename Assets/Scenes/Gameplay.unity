@@ -2515,6 +2515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   rotationSpeed: 500
+  anim: {fileID: 5989973703515807749}
 --- !u!4 &6011586046106424317
 Transform:
   m_ObjectHideFlags: 0

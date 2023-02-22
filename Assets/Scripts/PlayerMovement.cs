@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private const string StartMoving = "isMoving";
     [SerializeField] private float movementSpeed = 5;
     [SerializeField] private float rotationSpeed = 500;
 
-    Animator anim;
+    public Animator anim;
 
     private Touch _touch;
 
@@ -16,16 +17,27 @@ public class PlayerMovement : MonoBehaviour
 
     private bool _dragStarted;
     private bool _isMoving;
-    void Start()
+
+    public static PlayerMovement instance;
+
+    private void Awake()
     {
-        anim = gameObject.GetComponent<Animator>();
+        if(instance == null)
+        {
+            instance = this;
+            return;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
-    void Update()
+    private void Update()
     {
         if (anim)
         {
-            anim.SetBool("isMoving", _isMoving);
+            anim.SetBool(StartMoving, _isMoving);
         }
         if (Input.touchCount > 0)
         {
@@ -61,12 +73,12 @@ public class PlayerMovement : MonoBehaviour
         return _isMoving;
     }
 
-    Quaternion CalculateRotation()
+    private Quaternion CalculateRotation()
     {
         Quaternion temp = Quaternion.LookRotation(CalculateDirection(), Vector3.up);
         return temp;
     }
-    Vector3 CalculateDirection()
+    private Vector3 CalculateDirection()
     {
         Vector3 temp = (_touchDown - _touchUp).normalized;
         temp.z = temp.y;
