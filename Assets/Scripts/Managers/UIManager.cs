@@ -18,4 +18,46 @@ public class UIManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public void TestIfThereAreThreeSameObjectsConsecutively()
+    {
+        // Assuming your list of GameObjects is called 'GameManager.Instance.inventory'
+        List<GameObject> gameObjects = GameManager.Instance.inventory;
+
+        int consecutiveCount = 1;
+        int startIndex = -1;
+        for (int i = 1; i < gameObjects.Count; i++)
+        {
+            if (gameObjects[i].tag == gameObjects[i - 1].tag)
+            {
+                consecutiveCount++;
+                if (consecutiveCount == 3)
+                {
+                    startIndex = i - 2;
+                    break;
+                }
+            }
+            else
+            {
+                consecutiveCount = 1;
+            }
+        }
+
+        if (startIndex != -1)
+        {
+            // Remove the three consecutive GameObjects
+            gameObjects.RemoveRange(startIndex, 3);
+
+            // Move the remaining GameObjects to the start of the list
+            for (int i = startIndex; i < gameObjects.Count - 2; i++)
+            {
+                gameObjects[i] = gameObjects[i + 3];
+            }
+
+            // Remove the last three GameObjects from the list
+            //gameObjects.RemoveRange(gameObjects.Count - 3, 3);
+
+            Debug.Log("Three consecutive matching objects found and removed!");
+        }
+    }
 }
