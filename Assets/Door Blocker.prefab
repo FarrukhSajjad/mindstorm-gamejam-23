@@ -451,7 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1238098009208930137}
   m_Layer: 0
-  m_Name: LaserWall (1)
+  m_Name: Door Blocker
   m_TagString: BulletLaserWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

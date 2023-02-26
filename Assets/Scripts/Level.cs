@@ -6,6 +6,8 @@ public class Level : MonoBehaviour
 {
     public List<GameObject> balloonsInThisLevel = new List<GameObject>();
 
+    public Animation activateableAnim;
+
     public static Level Instance;
 
     private void Awake()
