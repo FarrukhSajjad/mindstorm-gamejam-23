@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 
     public Transform gridContent;
 
+    public GameObject controllerPanel;
 
 
     public static UIManager Instance;
@@ -26,5 +27,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    
+    private void Update()
+    {
+        if(Input.touchCount > 0)
+        {
+            controllerPanel.SetActive(false);
+        }
+    }
+
+
 }
