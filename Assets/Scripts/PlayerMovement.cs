@@ -85,4 +85,18 @@ public class PlayerMovement : MonoBehaviour
         temp.y = 0;
         return temp;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.GetComponent<Balloon>() != null)
+        {
+            GameManager.Instance.inventory.Add(other.gameObject);
+            other.gameObject.SetActive(false);
+
+            //Remove balloon from the level list
+            Level.Instance.UpdateBalloonInhisLevel(other.gameObject);
+
+            GameManager.Instance.TestIfThereAreThreeSameObjectsConsecutively();
+        }
+    }
 }
