@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -93,8 +94,25 @@ public class PlayerMovement : MonoBehaviour
             GameManager.Instance.inventory.Add(other.gameObject);
             other.gameObject.SetActive(false);
 
+            // Create a new GameObject
+            GameObject newImageObject = new GameObject("Image");
+
+            // Add an Image component to the new GameObject
+            Image newImage = newImageObject.AddComponent<Image>();
+
+            newImage.color = new Color(1f, 0f, 0f, 1f);
+
+            newImage.gameObject.transform.SetParent(UIManager.Instance.gridContent);
+
+            //Sprite newSprite;
+            //// Set the sprite of the new Image component
+            //newImage.sprite = newSprite;
+
             //Remove balloon from the level list
             Level.Instance.UpdateBalloonInhisLevel(other.gameObject);
+
+            //Add image in the canvas
+            UIManager.Instance.gridImages.Add(newImage);
 
             GameManager.Instance.TestIfThereAreThreeSameObjectsConsecutively();
         }

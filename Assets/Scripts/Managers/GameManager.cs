@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -46,13 +48,26 @@ public class GameManager : MonoBehaviour
 
         if (startIndex != -1)
         {
+            
             // Remove the three consecutive GameObjects
             gameObjects.RemoveRange(startIndex, 3);
+
+            //Remove the consecutive Images
+            UIManager.Instance.gridImages.RemoveRange(startIndex, 3);
+
+            // Remove the Images from the scene
+            for (int i = startIndex; i < startIndex + 3; i++)
+            {
+                Destroy(UIManager.Instance.gridContent.transform.GetChild(i).gameObject);
+            }
+
+
 
             // Move the remaining GameObjects to the start of the list
             for (int i = startIndex; i < gameObjects.Count - 2; i++)
             {
                 gameObjects[i] = gameObjects[i + 3];
+                UIManager.Instance.gridImages[i] = UIManager.Instance.gridImages[i + 3];
             }
 
             // Remove the last three GameObjects from the list
@@ -60,7 +75,7 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("Three consecutive matching objects found and removed!");
 
-            if(Level.Instance.balloonsInThisLevel.Count == 0 && inventory.Count == 0)
+            if (Level.Instance.balloonsInThisLevel.Count == 0 && inventory.Count == 0)
             {
                 Debug.Log("Level Passed");
             }
@@ -71,7 +86,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("LEVEL FAILED");
         }
 
-       
+
 
     }
 
