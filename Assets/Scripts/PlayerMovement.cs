@@ -92,7 +92,14 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.GetComponent<Balloon>() != null)
         {
             GameManager.Instance.inventory.Add(other.gameObject);
-            other.gameObject.SetActive(false);
+            other.gameObject.GetComponent<SphereCollider>().enabled = false;
+
+            //fly the balloon up
+            var rb = other.gameObject.GetComponent<Rigidbody>();
+            rb.isKinematic = false;
+            rb.AddForce(Vector3.up * 20, ForceMode.Impulse);
+
+            //other.gameObject.SetActive(false);
 
             // Create a new GameObject
             GameObject newImageObject = new GameObject("Image");
@@ -100,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
             // Add an Image component to the new GameObject
             Image newImage = newImageObject.AddComponent<Image>();
 
-            newImage.color = new Color(1f, 0f, 0f, 1f);
+            newImage.sprite = other.gameObject.GetComponent<Balloon>().gemSprite;
 
             newImage.gameObject.transform.SetParent(UIManager.Instance.gridContent);
 

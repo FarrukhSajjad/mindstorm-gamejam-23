@@ -4,4 +4,5 @@ using UnityEngine;
 
 public class Balloon : MonoBehaviour
 {
+    public Sprite gemSprite;
 }

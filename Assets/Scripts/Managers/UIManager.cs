@@ -10,9 +10,6 @@ public class UIManager : MonoBehaviour
     public Transform gridContent;
 
 
-    // Create a new list to store the removed game objects
-    public List<Image> removedObjects = new List<Image>();
-
 
     public static UIManager Instance;
 
