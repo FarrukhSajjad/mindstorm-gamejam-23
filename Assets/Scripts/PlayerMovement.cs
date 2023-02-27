@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             return;
@@ -89,27 +89,43 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<Balloon>() != null)
+        if (other.gameObject.GetComponent<Balloon>() != null)
         {
             GameManager.Instance.inventory.Add(other.gameObject);
             other.gameObject.GetComponent<SphereCollider>().enabled = false;
 
             //fly the balloon up
-            var rb = other.gameObject.GetComponent<Rigidbody>();
-            rb.isKinematic = false;
-            rb.AddForce(Vector3.up * 20, ForceMode.Impulse);
+            //var rb = other.gameObject.GetComponent<Rigidbody>();
+            //rb.isKinematic = false;
+            //rb.AddForce(Vector3.up * 20, ForceMode.Impulse);
 
             //other.gameObject.SetActive(false);
 
             // Create a new GameObject
-            GameObject newImageObject = new GameObject("Image");
+            //GameObject newImageObject = new GameObject("Image");
 
             // Add an Image component to the new GameObject
-            Image newImage = newImageObject.AddComponent<Image>();
+            //Image newImage = newImageObject.AddComponent<Image>();
 
-            newImage.sprite = other.gameObject.GetComponent<Balloon>().gemSprite;
+            //newImage.sprite = other.gameObject.GetComponent<Balloon>().gemSprite;
 
-            newImage.gameObject.transform.SetParent(UIManager.Instance.gridContent);
+            //newImage.gameObject.transform.SetParent(UIManager.Instance.gridContent);
+
+            var inventoryCount = GameManager.Instance.inventory.Count;
+            inventoryCount--;
+
+            Debug.Log("Count: " + inventoryCount);
+
+            other.gameObject.transform.SetParent(UIManager.Instance.eggGridContent.GetChild(inventoryCount));
+
+            other.gameObject.GetComponent<Animation>().enabled = false;
+
+            other.gameObject.transform.position = new Vector3(0, 0, 0);
+
+            other.gameObject.transform.localScale = new Vector3(130, 130, 130);
+
+            other.gameObject.transform.localPosition = new Vector3(0, 0, 0);
+
 
             //Sprite newSprite;
             //// Set the sprite of the new Image component
@@ -119,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
             Level.Instance.UpdateBalloonInhisLevel(other.gameObject);
 
             //Add image in the canvas
-            UIManager.Instance.gridImages.Add(newImage);
+            //UIManager.Instance.gridImages.Add(newImage);
 
             GameManager.Instance.TestIfThereAreThreeSameObjectsConsecutively();
         }

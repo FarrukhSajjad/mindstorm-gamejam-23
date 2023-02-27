@@ -11,6 +11,15 @@ public class UIManager : MonoBehaviour
 
     public GameObject controllerPanel;
 
+    public Transform eggGridContent;
+
+    public GameObject levelCompletedPanel, levelFailedPanel;
+
+    [Space(10)]
+    [Header("Buttons")]
+    [SerializeField]
+    private Button nextLevelButton;
+
 
     public static UIManager Instance;
 

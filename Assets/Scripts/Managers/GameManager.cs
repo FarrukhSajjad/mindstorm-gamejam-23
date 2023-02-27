@@ -53,12 +53,13 @@ public class GameManager : MonoBehaviour
             gameObjects.RemoveRange(startIndex, 3);
 
             //Remove the consecutive Images
-            UIManager.Instance.gridImages.RemoveRange(startIndex, 3);
+            //UIManager.Instance.gridImages.RemoveRange(startIndex, 3);
+
 
             // Remove the Images from the scene
             for (int i = startIndex; i < startIndex + 3; i++)
             {
-                Destroy(UIManager.Instance.gridContent.transform.GetChild(i).gameObject);
+                Destroy(UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject);
             }
 
 
@@ -67,7 +68,7 @@ public class GameManager : MonoBehaviour
             for (int i = startIndex; i < gameObjects.Count - 2; i++)
             {
                 gameObjects[i] = gameObjects[i + 3];
-                UIManager.Instance.gridImages[i] = UIManager.Instance.gridImages[i + 3];
+                //UIManager.Instance.gridImages[i] = UIManager.Instance.gridImages[i + 3];
             }
 
             // Remove the last three GameObjects from the list
