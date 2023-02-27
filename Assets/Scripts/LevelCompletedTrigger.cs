@@ -8,7 +8,6 @@ public class LevelCompletedTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("LevelCompleted");
             LevelManager.Instance.OnLevelCompletedEvent();
             UIManager.Instance.levelCompletedPanel.SetActive(true);
         }

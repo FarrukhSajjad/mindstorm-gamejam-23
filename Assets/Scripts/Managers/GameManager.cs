@@ -58,9 +58,6 @@ public class GameManager : MonoBehaviour
                 gameObjects[i] = gameObjects[i + 3];
             }
 
-           
-            Debug.Log("Three consecutive matching objects found and removed!");
-
             Invoke(nameof(RemoveItemsFromInventory), 1f);
 
             if (Level.Instance.balloonsInThisLevel.Count == 0 && inventory.Count == 0)
@@ -71,7 +68,6 @@ public class GameManager : MonoBehaviour
 
         if (Level.Instance.balloonsInThisLevel.Count > 0 && inventory.Count == 5)
         {
-            Debug.Log("LEVEL FAILED");
             UIManager.Instance.levelFailedPanel.SetActive(true);
         }
 
@@ -83,6 +79,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject);
         }
+
     }
 
 }

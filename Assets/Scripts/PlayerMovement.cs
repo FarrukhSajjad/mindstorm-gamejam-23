@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -101,24 +99,12 @@ public class PlayerMovement : MonoBehaviour
 
             other.gameObject.GetComponent<Animation>().enabled = false;
 
-            //other.gameObject.transform.position = new Vector3(0, 0, 0);
-
-            //other.gameObject.transform.localScale = new Vector3(130, 130, 130);
-
             other.gameObject.transform.localPosition = new Vector3(0, 0, 0);
 
             StartCoroutine(LerpScaling(other.gameObject.transform.localScale, new Vector3(130, 130, 130), other.gameObject, false));
 
-
-            //Sprite newSprite;
-            //// Set the sprite of the new Image component
-            //newImage.sprite = newSprite;
-
             //Remove balloon from the level list
             Level.Instance.UpdateBalloonInhisLevel(other.gameObject);
-
-            //Add image in the canvas
-            //UIManager.Instance.gridImages.Add(newImage);
 
             GameManager.Instance.TestIfThereAreThreeSameObjectsConsecutively();
         }
@@ -141,24 +127,10 @@ public class PlayerMovement : MonoBehaviour
 
             baseObj.localScale = Vector3.Lerp(scale, scaleTo, elapsedTime / timeToLerp);
 
-            //if (isReverse)
-            //{
-            //    //lerp the position back
-            //    baseObj.position = Vector3.Lerp(baseObj.position, offset, elapsedTime / timeToLerp);
-            //}
-            //else
-            //{
-            //    //lerp the position
-            //    baseObj.position = Vector3.Lerp(baseObj.position, baseObj.position - obj.transform.position + offset, elapsedTime / timeToLerp);
-            //}
-
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-
-
     }
-
 
 }

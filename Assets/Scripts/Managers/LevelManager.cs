@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -46,7 +44,6 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Game Completed");
             UIManager.Instance.gamecompletedPanel.SetActive(true);
         }
 
@@ -55,7 +52,6 @@ public class LevelManager : MonoBehaviour
     public void OnLevelCompletedEvent()
     {
         currentLevelToLoad++;
-        Debug.Log("Next level : " + currentLevelToLoad);
         PlayerPrefs.SetInt(PlayerPrefsHelper.LevelToLoad, currentLevelToLoad++);
     }
 }

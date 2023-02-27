@@ -17,7 +17,6 @@ public class MainMenu : MonoBehaviour
         settingsButton.onClick.AddListener((OnSettingsButtonPressed));
     }
 
-    
     private void OnSettingsButtonPressed()
     {
         settingsPanel.SetActive(true);
