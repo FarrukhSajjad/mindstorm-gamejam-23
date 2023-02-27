@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
 
     public Transform eggGridContent;
 
-    public GameObject levelCompletedPanel, levelFailedPanel;
+    public GameObject levelCompletedPanel, levelFailedPanel, gamecompletedPanel;
 
     [Space(10)]
     [Header("Buttons")]
@@ -55,5 +55,10 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void OnResetGameButtonPressed()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
 }

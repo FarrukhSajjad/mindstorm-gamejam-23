@@ -47,6 +47,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             Debug.Log("Game Completed");
+            UIManager.Instance.gamecompletedPanel.SetActive(true);
         }
 
     }
