@@ -114,8 +114,6 @@ public class PlayerMovement : MonoBehaviour
             var inventoryCount = GameManager.Instance.inventory.Count;
             inventoryCount--;
 
-            Debug.Log("Count: " + inventoryCount);
-
             other.gameObject.transform.SetParent(UIManager.Instance.eggGridContent.GetChild(inventoryCount));
 
             other.gameObject.GetComponent<Animation>().enabled = false;
