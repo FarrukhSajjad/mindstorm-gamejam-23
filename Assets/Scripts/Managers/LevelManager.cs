@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public CameraFollow cameraFollow;
+
     public GameObject[] levels;
     public GameObject currentLevel;
     public int currentLevelToLoad;
+    public GameObject playerToSpawnInLevel;
 
 
     public static LevelManager Instance;

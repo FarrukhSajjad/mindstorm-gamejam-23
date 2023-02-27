@@ -8,6 +8,8 @@ public class Level : MonoBehaviour
 
     public Animation activateableAnim;
 
+    public Transform playerSpawnPoint;
+
     public static Level Instance;
 
     private void Awake()
@@ -21,6 +23,12 @@ public class Level : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    private void Start()
+    {
+        Instantiate(LevelManager.Instance.playerToSpawnInLevel, playerSpawnPoint.position, Quaternion.identity);
+        LevelManager.Instance.cameraFollow.enabled = true;
     }
 
     public void UpdateBalloonInhisLevel(GameObject balloonToRemove)
