@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
+    public bool isTutorialLevel;
+
     public List<GameObject> balloonsInThisLevel = new List<GameObject>();
 
     public Animation activateableAnim;
@@ -29,6 +31,11 @@ public class Level : MonoBehaviour
     {
         Instantiate(LevelManager.Instance.playerToSpawnInLevel, playerSpawnPoint.position, Quaternion.identity);
         LevelManager.Instance.cameraFollow.enabled = true;
+
+        if (this.isTutorialLevel)
+        {
+            UIManager.Instance.tutorialPanel.SetActive(true);
+        }
     }
 
     public void UpdateBalloonInhisLevel(GameObject balloonToRemove)

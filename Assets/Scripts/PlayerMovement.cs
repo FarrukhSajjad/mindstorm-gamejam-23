@@ -32,6 +32,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if (Level.Instance.isTutorialLevel)
+        {
+            this.enabled = false;
+        }
+    }
+
     private void Update()
     {
         if (anim)

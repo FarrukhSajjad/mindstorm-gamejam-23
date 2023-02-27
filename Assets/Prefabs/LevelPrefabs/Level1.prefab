@@ -419,6 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c47932c2bc72ac499f13353f6f49e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTutorialLevel: 1
   balloonsInThisLevel:
   - {fileID: 3743379554265649844}
   - {fileID: 7866300800541499620}

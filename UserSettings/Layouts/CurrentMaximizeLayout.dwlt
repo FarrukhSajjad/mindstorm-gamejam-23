@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 19706
+  controlID: 31193
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.GameView
   m_SerializedViewValues:
-  - D:\mindstorm-gamejam-23\Library\PlayModeViewStates\a633999756583b24687595c58610843e
+  - D:\mindstorm-gamejam-23\Library\PlayModeViewStates\b084fdcc66c88014393882175c12c39f
   m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 19707
+  controlID: 31194
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 19708
+  controlID: 31195
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,8 +154,8 @@ MonoBehaviour:
     y: 0
     width: 313.33334
     height: 441.33334
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -192,9 +192,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: fc4cfeffc265feffc665feffc865feffeeaefeff90b4feff88cffeff963bffff6c4dffff6e4dffff9a67ffffa067ffff0e7cffffd07fffff8e81ffff5c87ffff2c9fffff3ea0ffff9eb1ffffa4b1ffffaab1ffff76ceffffd2cfffff26fbffff1260000098600000c2600000006100000c61000026610000f4c3000004c400000ac400005ac4000054de00007ede000090de0000d0de00000adf0000
+      m_SelectedIDs: d0de0000
+      m_LastClickedID: 57040
+      m_ExpandedIDs: 1ae5fdffa8e6fdff041afeffb22ffefffc4cfeffc265feffc665feffc865feffeeaefeff90b4feff88cffeff963bffff6c4dffff6e4dffff9a67ffffa067ffff0e7cffffd07fffff8e81ffff5c87ffff2c9fffff3ea0ffff9eb1ffffa4b1ffffaab1ffff76ceffffd2cfffff26fbffff1260000098600000c2600000006100000c61000026610000f4c3000004c400000ac400005ac4000054de000090de0000d0de00000adf000050df0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -237,8 +237,8 @@ MonoBehaviour:
     y: 0
     width: 755.33325
     height: 441.33334
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -520,14 +520,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 0
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.9713564, y: 1.8796318, z: -9.164544}
+    m_Target: {x: 517.9352, y: 846.2291, z: -0.5024612}
     speed: 2
-    m_Value: {x: -2.9713564, y: 1.8796318, z: -9.164544}
+    m_Value: {x: 517.9352, y: 846.2291, z: -0.5024612}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -574,17 +574,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.064142056, y: 0.5567676, z: -0.043178685, w: 0.82706684}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0.064142056, y: 0.5567676, z: -0.04317869, w: 0.8270669}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.4683123
+    m_Target: 110.766136
     speed: 2
-    m_Value: 3.318959
+    m_Value: 110.766136
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1.6001995
     m_SpeedNormalized: 0.7999997
@@ -598,7 +598,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.423957, y: 0.017658351, z: -0.008267341, w: 0.9054748}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -688,8 +688,8 @@ MonoBehaviour:
     y: 0
     width: 234.66675
     height: 441.33334
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -705,7 +705,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -714,16 +714,16 @@ MonoBehaviour:
     y: 441.33334
     width: 1303.3334
     height: 377.99997
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 1
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -765,22 +765,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/New Props
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/New Props
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\mindstorm-gamejam-23
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 463.00003}
-    m_SelectedIDs: 5c640000
-    m_LastClickedID: 25692
-    m_ExpandedIDs: 000000005c6400005e64000060640000626400006464000066640000686400006a6400006c6400006e64000070640000726400007c7e000006250100082501000a2501005a2501005c2501005e2501006025010000ca9a3b
+    scrollPos: {x: 0, y: 703}
+    m_SelectedIDs: fe9f0100
+    m_LastClickedID: 106494
+    m_ExpandedIDs: 000000005c6400005e64000060640000626400006464000066640000686400006a6400006c6400006e64000070640000726400004c7e00007c7e000006250100082501000a2501005a2501005c2501005e2501006025010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -833,8 +833,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f2df0000
-    m_LastClickedInstanceID: 57330
+    m_SelectedInstanceIDs: a8e6fdff
+    m_LastClickedInstanceID: -137560
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -933,22 +933,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/LevelPrefabs
+    - Assets/Scripts/Managers
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/LevelPrefabs
+  - Assets/Scripts/Managers
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\mindstorm-gamejam-23
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 883}
-    m_SelectedIDs: 987e0000
-    m_LastClickedID: 32408
-    m_ExpandedIDs: 000000005c6400005e64000060640000626400006464000066640000686400006a6400006c6400006e64000070640000726400007c7e000006250100082501000a2501005a2501005c2501005e2501006025010000ca9a3b
+    m_SelectedIDs: 4e7e0000
+    m_LastClickedID: 32334
+    m_ExpandedIDs: 000000005c6400005e64000060640000626400006464000066640000686400006a6400006c6400006e64000070640000726400004c7e00007c7e000006250100082501000a2501005a2501005c2501005e2501006025010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1001,9 +1001,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: d0de0000
+    m_LastClickedInstanceID: 57040
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 400f010066b000001ab80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1082,8 +1082,8 @@ MonoBehaviour:
     y: 0
     width: 403.33325
     height: 819.3333
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}

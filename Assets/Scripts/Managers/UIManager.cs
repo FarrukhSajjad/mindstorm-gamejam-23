@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
 
     public Transform eggGridContent;
 
-    public GameObject levelCompletedPanel, levelFailedPanel, gamecompletedPanel;
+    public GameObject levelCompletedPanel, levelFailedPanel, gamecompletedPanel, tutorialPanel;
 
     [Space(10)]
     [Header("Buttons")]
@@ -41,6 +41,7 @@ public class UIManager : MonoBehaviour
     {
         if(Input.touchCount > 0)
         {
+            if (Level.Instance.isTutorialLevel) return;
             controllerPanel.SetActive(false);
         }
     }
@@ -59,6 +60,12 @@ public class UIManager : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void OnLetsGoButtonPressed()
+    {
+        PlayerMovement.instance.gameObject.GetComponent<PlayerMovement>().enabled = true;
+        Level.Instance.isTutorialLevel = false;
     }
 
 }
