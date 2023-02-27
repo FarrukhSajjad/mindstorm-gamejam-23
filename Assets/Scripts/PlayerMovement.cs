@@ -94,23 +94,6 @@ public class PlayerMovement : MonoBehaviour
             GameManager.Instance.inventory.Add(other.gameObject);
             other.gameObject.GetComponent<SphereCollider>().enabled = false;
 
-            //fly the balloon up
-            //var rb = other.gameObject.GetComponent<Rigidbody>();
-            //rb.isKinematic = false;
-            //rb.AddForce(Vector3.up * 20, ForceMode.Impulse);
-
-            //other.gameObject.SetActive(false);
-
-            // Create a new GameObject
-            //GameObject newImageObject = new GameObject("Image");
-
-            // Add an Image component to the new GameObject
-            //Image newImage = newImageObject.AddComponent<Image>();
-
-            //newImage.sprite = other.gameObject.GetComponent<Balloon>().gemSprite;
-
-            //newImage.gameObject.transform.SetParent(UIManager.Instance.gridContent);
-
             var inventoryCount = GameManager.Instance.inventory.Count;
             inventoryCount--;
 
@@ -118,11 +101,13 @@ public class PlayerMovement : MonoBehaviour
 
             other.gameObject.GetComponent<Animation>().enabled = false;
 
-            other.gameObject.transform.position = new Vector3(0, 0, 0);
+            //other.gameObject.transform.position = new Vector3(0, 0, 0);
 
-            other.gameObject.transform.localScale = new Vector3(130, 130, 130);
+            //other.gameObject.transform.localScale = new Vector3(130, 130, 130);
 
             other.gameObject.transform.localPosition = new Vector3(0, 0, 0);
+
+            StartCoroutine(LerpScaling(other.gameObject.transform.localScale, new Vector3(130, 130, 130), other.gameObject, false));
 
 
             //Sprite newSprite;
@@ -138,4 +123,42 @@ public class PlayerMovement : MonoBehaviour
             GameManager.Instance.TestIfThereAreThreeSameObjectsConsecutively();
         }
     }
+
+    private float elapsedTime;
+    private float timeToLerp = 0.5f;
+
+    private IEnumerator LerpScaling(Vector3 scale, Vector3 scaleTo, GameObject obj, bool isReverse)
+    {
+
+        Vector3 offset = new Vector3(0, 0, 2.5f);
+
+        Transform baseObj = obj.transform;
+
+        elapsedTime = 0;
+
+        while (elapsedTime < timeToLerp)
+        {
+
+            baseObj.localScale = Vector3.Lerp(scale, scaleTo, elapsedTime / timeToLerp);
+
+            //if (isReverse)
+            //{
+            //    //lerp the position back
+            //    baseObj.position = Vector3.Lerp(baseObj.position, offset, elapsedTime / timeToLerp);
+            //}
+            //else
+            //{
+            //    //lerp the position
+            //    baseObj.position = Vector3.Lerp(baseObj.position, baseObj.position - obj.transform.position + offset, elapsedTime / timeToLerp);
+            //}
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+
+
+    }
+
+
 }

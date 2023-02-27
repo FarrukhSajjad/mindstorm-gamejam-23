@@ -22,13 +22,16 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    private int startIndex;
+
     public void TestIfThereAreThreeSameObjectsConsecutively()
     {
         // Assuming your list of GameObjects is called 'GameManager.Instance.inventory'
         List<GameObject> gameObjects = GameManager.Instance.inventory;
 
         int consecutiveCount = 1;
-        int startIndex = -1;
+        startIndex = -1;
         for (int i = 1; i < gameObjects.Count; i++)
         {
             if (gameObjects[i].tag == gameObjects[i - 1].tag)
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour
             // Remove the Images from the scene
             for (int i = startIndex; i < startIndex + 3; i++)
             {
-                Destroy(UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject);
+                //Destroy(UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject);
             }
 
 
@@ -76,6 +79,8 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("Three consecutive matching objects found and removed!");
 
+            Invoke(nameof(RemoveItemsFromInventory), 1f);
+
             if (Level.Instance.balloonsInThisLevel.Count == 0 && inventory.Count == 0)
             {
                 Level.Instance.activateableAnim.Play();
@@ -90,6 +95,14 @@ public class GameManager : MonoBehaviour
 
 
 
+    }
+
+    private void RemoveItemsFromInventory()
+    {
+        for (int i = startIndex; i < startIndex + 3; i++)
+        {
+            Destroy(UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject);
+        }
     }
 
 }
