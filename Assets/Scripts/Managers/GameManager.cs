@@ -78,7 +78,6 @@ public class GameManager : MonoBehaviour
 
             if (Level.Instance.balloonsInThisLevel.Count == 0 && inventory.Count == 0)
             {
-                Debug.Log("Level Passed");
                 Level.Instance.activateableAnim.Play();
             }
         }
@@ -86,6 +85,7 @@ public class GameManager : MonoBehaviour
         if (Level.Instance.balloonsInThisLevel.Count > 0 && inventory.Count == 5)
         {
             Debug.Log("LEVEL FAILED");
+            UIManager.Instance.levelFailedPanel.SetActive(true);
         }
 
 

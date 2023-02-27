@@ -46,7 +46,12 @@ public class LevelManager : MonoBehaviour
             Debug.Log("Game Completed");
         }
 
+    }
 
-
+    public void OnLevelCompletedEvent()
+    {
+        currentLevelToLoad++;
+        Debug.Log("Next level : " + currentLevelToLoad);
+        PlayerPrefs.SetInt(PlayerPrefsHelper.LevelToLoad, currentLevelToLoad++);
     }
 }

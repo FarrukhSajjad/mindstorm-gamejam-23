@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -42,6 +43,16 @@ public class UIManager : MonoBehaviour
         {
             controllerPanel.SetActive(false);
         }
+    }
+
+    public void OnNextLevelButtonPressed()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void OnRestartButtonPressed()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 

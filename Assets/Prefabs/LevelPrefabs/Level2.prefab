@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 6185435565879126619}
   - component: {fileID: 6185435565879126618}
   m_Layer: 0
-  m_Name: Level1
+  m_Name: Level2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1628,6 +1628,10 @@ PrefabInstance:
     - target: {fileID: 3300583972039933147, guid: efc4567394a535640ad3fec5f5016b58, type: 3}
       propertyPath: m_Name
       value: Escape Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300583972039933147, guid: efc4567394a535640ad3fec5f5016b58, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3300583972039933204, guid: efc4567394a535640ad3fec5f5016b58, type: 3}
       propertyPath: m_RootOrder
