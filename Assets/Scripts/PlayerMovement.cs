@@ -97,6 +97,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Balloon>() != null)
         {
+            AudioManager.instance.PlayEggCollectSound();
+
             GameManager.Instance.inventory.Add(other.gameObject);
             other.gameObject.GetComponent<SphereCollider>().enabled = false;
 

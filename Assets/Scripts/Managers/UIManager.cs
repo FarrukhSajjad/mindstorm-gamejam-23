@@ -48,11 +48,15 @@ public class UIManager : MonoBehaviour
 
     public void OnNextLevelButtonPressed()
     {
+        AudioManager.instance.PlayClickSfx();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void OnRestartButtonPressed()
     {
+        AudioManager.instance.PlayClickSfx();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -60,24 +64,32 @@ public class UIManager : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        AudioManager.instance.PlayClickSfx();
     }
 
     public void OnLetsGoButtonPressed()
     {
         PlayerMovement.instance.gameObject.GetComponent<PlayerMovement>().enabled = true;
         Level.Instance.isTutorialLevel = false;
+
+        AudioManager.instance.PlayClickSfx();
     }
 
     public void OnSettingsButtonPressed()
     {
         settingsPanel.SetActive(true);
         Time.timeScale = 0f;
+
+        AudioManager.instance.PlayClickSfx();
     }
 
     public void OnSettingsClosedButtonPressed()
     {
         settingsPanel.SetActive(false);
         Time.timeScale = 1f;
+
+        AudioManager.instance.PlayClickSfx();
     }
 
 }
