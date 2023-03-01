@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource backGroundMusic;
     public AudioSource buttonClickSound;
     public AudioSource eggCollectSound;
+    public AudioSource gateOpenSound;
 
     public static AudioManager instance;
 
@@ -68,6 +69,14 @@ public class AudioManager : MonoBehaviour
         if (PlayerPrefs.GetInt(PlayerPrefsHelper.Sound) == 1)
         {
             eggCollectSound.Play();
+        }
+    }
+
+    public void PlayGateOpenSound()
+    {
+        if (PlayerPrefs.GetInt(PlayerPrefsHelper.Sound) == 1)
+        {
+            gateOpenSound.Play();
         }
     }
 }

@@ -9,5 +9,7 @@ public class LaserButton : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         activateableAnim.Play();
+
+        AudioManager.instance.PlayGateOpenSound();
     }
 }

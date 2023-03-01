@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
             if (Level.Instance.balloonsInThisLevel.Count == 0 && inventory.Count == 0)
             {
                 Level.Instance.activateableAnim.Play();
+
+                AudioManager.instance.PlayGateOpenSound();
             }
         }
 
