@@ -8,6 +8,8 @@ TagManager:
   - BlueBallon
   - YellowBalloon
   - BrownBalloon
+  - ShootableDecoration
+  - BulletLaserWall
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Plane
   - 
   - 
   - 

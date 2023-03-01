@@ -2363,7 +2363,7 @@ MonoBehaviour:
   cameraFollow: {fileID: 1831311815}
   levels:
   - {fileID: 6185435565879126616, guid: 1d0e8429763a8c547a07da3c94bccfc5, type: 3}
-  - {fileID: 6185435565879126616, guid: 01902344e05b3fd42bf895eb1cdc70fe, type: 3}
+  - {fileID: 6185435565879126616, guid: de1254d8f6bd763438b650cc103c471d, type: 3}
   currentLevel: {fileID: 0}
   currentLevelToLoad: 0
   playerToSpawnInLevel: {fileID: 6682607732101329514, guid: 5f1bf48a88882384081c564a6201d75e, type: 3}
@@ -2632,7 +2632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3427,7 +3427,7 @@ GameObject:
   - component: {fileID: 1212924509}
   - component: {fileID: 1212924508}
   - component: {fileID: 1212924507}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4760,7 +4760,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 80
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -4785,14 +4785,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831311811}
-  m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
-  m_LocalPosition: {x: 0, y: 10, z: -5}
+  m_LocalRotation: {x: 0.33224338, y: 0, z: 0, w: 0.9431937}
+  m_LocalPosition: {x: 0.8, y: 20.052181, z: -11.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 38.81, y: 0, z: 0}
 --- !u!114 &1831311815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4805,7 +4805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4530998d993dd44e86da088ae960d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 10, z: -5}
+  offset: {x: 0, y: 20, z: -18.5}
   chaseSpeed: 5
 --- !u!1 &1844952311
 GameObject:
@@ -5631,7 +5631,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109293267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5641,8 +5641,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 83}
+  m_SizeDelta: {x: 0, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2109293269
 MonoBehaviour:

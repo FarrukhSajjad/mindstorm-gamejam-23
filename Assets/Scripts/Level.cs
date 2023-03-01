@@ -30,7 +30,9 @@ public class Level : MonoBehaviour
     private void Start()
     {
         Instantiate(LevelManager.Instance.playerToSpawnInLevel, playerSpawnPoint.position, Quaternion.identity);
-        LevelManager.Instance.cameraFollow.enabled = true;
+        //LevelManager.Instance.cameraFollow.enabled = true;
+        //Invoke(nameof(SetChaseSpeed), 1f);
+        
 
         if (this.isTutorialLevel)
         {
@@ -41,5 +43,10 @@ public class Level : MonoBehaviour
     public void UpdateBalloonInhisLevel(GameObject balloonToRemove)
     {
         balloonsInThisLevel.Remove(balloonToRemove);
+    }
+
+    private void SetChaseSpeed()
+    {
+        //LevelManager.Instance.cameraFollow.chaseSpeed = 0.5f;
     }
 }

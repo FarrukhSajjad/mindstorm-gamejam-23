@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
 {
     private Transform target;
     [SerializeField] private Vector3 offset;
-    [SerializeField] private float chaseSpeed = 5;
+    public float chaseSpeed = 5;
     void Start()
     {
         if (!target)
