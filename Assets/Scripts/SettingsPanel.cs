@@ -74,6 +74,9 @@ public class SettingsPanel : MonoBehaviour
 
             //deactivate the checkMark
             musicCheck.SetActive(false);
+
+            //Stop BG music
+            AudioManager.instance.backGroundMusic.Stop();
         }
         else
         {
@@ -82,6 +85,8 @@ public class SettingsPanel : MonoBehaviour
 
             //activate the checkMark
             musicCheck.SetActive(true);
+
+            AudioManager.instance.backGroundMusic.Play();
         }
     }
 

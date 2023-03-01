@@ -12,26 +12,41 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        if (!PlayerPrefs.HasKey(PlayerPrefsHelper.Sound))
+            PlayerPrefs.SetInt(PlayerPrefsHelper.Sound, 1);
+
+
+        if (!PlayerPrefs.HasKey(PlayerPrefsHelper.Music))
+            PlayerPrefs.SetInt(PlayerPrefsHelper.Music, 1);
+
+
+        if (!PlayerPrefs.HasKey(PlayerPrefsHelper.Vibration))
+            PlayerPrefs.SetInt(PlayerPrefsHelper.Vibration, 1);
+
+
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            //DontDestroyOnLoad(this.gameObject);
             return;
         }
         else
         {
             Destroy(this.gameObject);
         }
+
+
+       
     }
 
     private void Start()
     {
-        PlayBGMusic();
+        Invoke(nameof(PlayBGMusic), 0.1f);
     }
 
     public void PlayClickSfx()
     {
-        if(PlayerPrefs.GetInt(PlayerPrefsHelper.Sound) == 1)
+        if (PlayerPrefs.GetInt(PlayerPrefsHelper.Sound) == 1)
         {
             buttonClickSound.Play();
         }
@@ -39,10 +54,13 @@ public class AudioManager : MonoBehaviour
 
     public void PlayBGMusic()
     {
+        Debug.Log("123");
         if (PlayerPrefs.GetInt(PlayerPrefsHelper.Music) == 1)
         {
+            Debug.Log("HH1");
             backGroundMusic.Play();
         }
+
     }
 
     public void PlayEggCollectSound()
