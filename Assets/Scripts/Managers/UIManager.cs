@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
 
     public Transform eggGridContent;
 
-    public GameObject levelCompletedPanel, levelFailedPanel, gamecompletedPanel, tutorialPanel;
+    public GameObject levelCompletedPanel, levelFailedPanel, gamecompletedPanel, tutorialPanel, settingsPanel;
 
     [Space(10)]
     [Header("Buttons")]
@@ -66,6 +66,18 @@ public class UIManager : MonoBehaviour
     {
         PlayerMovement.instance.gameObject.GetComponent<PlayerMovement>().enabled = true;
         Level.Instance.isTutorialLevel = false;
+    }
+
+    public void OnSettingsButtonPressed()
+    {
+        settingsPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void OnSettingsClosedButtonPressed()
+    {
+        settingsPanel.SetActive(false);
+        Time.timeScale = 1f;
     }
 
 }

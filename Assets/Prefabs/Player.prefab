@@ -2336,7 +2336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  rotationSpeed: 300
+  rotationSpeed: 500
   anim: {fileID: 4267152313068955127}
 --- !u!136 &4267152313068955125
 CapsuleCollider:

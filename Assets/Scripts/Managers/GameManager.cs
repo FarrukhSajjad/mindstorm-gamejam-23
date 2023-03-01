@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        Application.targetFrameRate = 120;
     }
 
     private int startIndex;
