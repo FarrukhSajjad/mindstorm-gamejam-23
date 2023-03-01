@@ -5,6 +5,7 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     public bool isTutorialLevel;
+    public bool isBomberTutorial;
 
     public List<GameObject> balloonsInThisLevel = new List<GameObject>();
 
@@ -37,6 +38,11 @@ public class Level : MonoBehaviour
         if (this.isTutorialLevel)
         {
             UIManager.Instance.tutorialPanel.SetActive(true);
+        }
+
+        if(this.isBomberTutorial)
+        {
+            UIManager.Instance.bomberTutorialPanel.SetActive(true);
         }
     }
 

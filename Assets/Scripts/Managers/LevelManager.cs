@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour
     public int currentLevelToLoad;
     public GameObject playerToSpawnInLevel;
 
+    public GameObject blastPrefab;
+
 
     public static LevelManager Instance;
 
@@ -53,5 +55,10 @@ public class LevelManager : MonoBehaviour
     {
         currentLevelToLoad++;
         PlayerPrefs.SetInt(PlayerPrefsHelper.LevelToLoad, currentLevelToLoad++);
+    }
+
+    public void OnLevelFailedEvent()
+    {
+        UIManager.Instance.levelFailedPanel.SetActive(true);
     }
 }

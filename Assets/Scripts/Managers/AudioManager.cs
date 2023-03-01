@@ -36,7 +36,6 @@ public class AudioManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-
        
     }
 
@@ -55,10 +54,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlayBGMusic()
     {
-        Debug.Log("123");
         if (PlayerPrefs.GetInt(PlayerPrefsHelper.Music) == 1)
         {
-            Debug.Log("HH1");
             backGroundMusic.Play();
         }
 

@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
 
     public Transform eggGridContent;
 
-    public GameObject levelCompletedPanel, levelFailedPanel, gamecompletedPanel, tutorialPanel, settingsPanel;
+    public GameObject levelCompletedPanel, levelFailedPanel, gamecompletedPanel, tutorialPanel, settingsPanel, bomberTutorialPanel;
 
     [Space(10)]
     [Header("Buttons")]
