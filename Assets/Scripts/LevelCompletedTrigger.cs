@@ -8,8 +8,22 @@ public class LevelCompletedTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            LevelManager.Instance.OnLevelCompletedEvent();
-            UIManager.Instance.levelCompletedPanel.SetActive(true);
+            Invoke(nameof(DelayInLevelComplete), 1f);
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<PlayerMovement>().enabled = false;
+            other.gameObject.GetComponent<Animator>().enabled = false;
+        }
+    }
+
+    private void DelayInLevelComplete()
+    {
+        LevelManager.Instance.OnLevelCompletedEvent();
+        UIManager.Instance.levelCompletedPanel.SetActive(true);
     }
 }

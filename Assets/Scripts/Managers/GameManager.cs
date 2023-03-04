@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
         if (startIndex != -1)
         {
-            
+
             // Remove the three consecutive GameObjects
             gameObjects.RemoveRange(startIndex, 3);
 
@@ -72,16 +72,24 @@ public class GameManager : MonoBehaviour
 
         if (Level.Instance.balloonsInThisLevel.Count > 0 && inventory.Count == 5)
         {
-            UIManager.Instance.levelFailedPanel.SetActive(true);
+            //UIManager.Instance.levelFailedPanel.SetActive(true);
+            Invoke(nameof(DelayInLevelFailed), 0.5f);
         }
 
+    }
+
+    private void DelayInLevelFailed()
+    {
+        UIManager.Instance.levelFailedPanel.SetActive(true);
     }
 
     private void RemoveItemsFromInventory()
     {
         for (int i = startIndex; i < startIndex + 3; i++)
         {
-            Destroy(UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject);
+            //UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject.GetComponent<Balloon>().particlesToEnable.SetActive(true);
+            UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject.GetComponent<SplitMesh>().enabled = true;
+            //Destroy(UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject);
         }
 
     }

@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour
     {
         if(Input.touchCount > 0)
         {
-            if (Level.Instance.isTutorialLevel) return;
+            //if (Level.Instance.isTutorialLevel) return;
             controllerPanel.SetActive(false);
         }
     }

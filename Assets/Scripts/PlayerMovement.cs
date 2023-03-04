@@ -113,6 +113,8 @@ public class PlayerMovement : MonoBehaviour
 
             StartCoroutine(LerpScaling(other.gameObject.transform.localScale, new Vector3(130, 130, 130), other.gameObject, false));
 
+            other.gameObject.GetComponent<Balloon>().particlesToEnable.SetActive(true);
+
             //Remove balloon from the level list
             Level.Instance.UpdateBalloonInhisLevel(other.gameObject);
 
