@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
 
     private int startIndex;
 
+    private void Start()
+    {
+        Input.simulateMouseWithTouches = true;
+    }
+
     public void TestIfThereAreThreeSameObjectsConsecutively()
     {
         // Assuming your list of GameObjects is called 'GameManager.Instance.inventory'
@@ -88,9 +93,15 @@ public class GameManager : MonoBehaviour
         for (int i = startIndex; i < startIndex + 3; i++)
         {
             //UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject.GetComponent<Balloon>().particlesToEnable.SetActive(true);
-            UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject.GetComponent<SplitMesh>().enabled = true;
-            //Destroy(UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject);
+            //UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject.GetComponent<SplitMesh>().enabled = true;
+
+            Instantiate(LevelManager.Instance.eggCollectionCompletedParticles, 
+                UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).transform.position, Quaternion.identity);
+            Destroy(UIManager.Instance.eggGridContent.transform.GetChild(i).GetChild(1).gameObject);
+
         }
+
+        AudioManager.instance.eggCollectionComplete.Play();
 
     }
 

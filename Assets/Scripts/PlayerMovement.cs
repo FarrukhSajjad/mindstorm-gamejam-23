@@ -145,4 +145,21 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Death")
+        {
+            Debug.Log("Level Failed");
+            Instantiate(LevelManager.Instance.blastPrefab, this.gameObject.transform.position, Quaternion.identity);
+            this.gameObject.SetActive(false);
+            AudioManager.instance.playerDeathSound.Play();
+            Invoke(nameof(DelayInLevelFailed), 0.5f);
+        }
+    }
+
+    private void DelayInLevelFailed()
+    {
+        LevelManager.Instance.OnLevelFailedEvent();
+    }
+
 }

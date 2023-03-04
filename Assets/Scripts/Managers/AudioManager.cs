@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource buttonClickSound;
     public AudioSource eggCollectSound;
     public AudioSource gateOpenSound;
+    public AudioSource playerDeathSound;
+    public AudioSource eggCollectionComplete;
 
     public static AudioManager instance;
 

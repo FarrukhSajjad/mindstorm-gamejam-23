@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     public GameObject currentLevel;
     public int currentLevelToLoad;
     public GameObject playerToSpawnInLevel;
+    public GameObject eggCollectionCompletedParticles;
 
     public GameObject blastPrefab;
 

@@ -8,6 +8,12 @@ public class LaserButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag != "Player") return;
+
+        Debug.Log(other.gameObject.name, other.gameObject);
+
+        Debug.Log("HH1");
+
         activateableAnim.Play();
 
         AudioManager.instance.PlayGateOpenSound();

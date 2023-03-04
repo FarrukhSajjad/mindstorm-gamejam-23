@@ -10,6 +10,7 @@ TagManager:
   - BrownBalloon
   - ShootableDecoration
   - BulletLaserWall
+  - Death
   layers:
   - Default
   - TransparentFX
