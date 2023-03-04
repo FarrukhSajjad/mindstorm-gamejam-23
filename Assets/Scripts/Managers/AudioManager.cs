@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource gateOpenSound;
     public AudioSource playerDeathSound;
     public AudioSource eggCollectionComplete;
+    public AudioSource lightingSound;
 
     public static AudioManager instance;
 

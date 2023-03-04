@@ -120,6 +120,16 @@ public class PlayerMovement : MonoBehaviour
 
             GameManager.Instance.TestIfThereAreThreeSameObjectsConsecutively();
         }
+
+
+        if (other.gameObject.tag == "Death")
+        {
+            Debug.Log("Level Failed");
+            Instantiate(LevelManager.Instance.blastPrefab, this.gameObject.transform.position, Quaternion.identity);
+            this.gameObject.SetActive(false);
+            AudioManager.instance.playerDeathSound.Play();
+            Invoke(nameof(DelayInLevelFailed), 0.1f);
+        }
     }
 
     private float elapsedTime;
@@ -156,6 +166,8 @@ public class PlayerMovement : MonoBehaviour
             Invoke(nameof(DelayInLevelFailed), 0.5f);
         }
     }
+
+
 
     private void DelayInLevelFailed()
     {

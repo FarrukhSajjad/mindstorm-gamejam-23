@@ -11,6 +11,7 @@ TagManager:
   - ShootableDecoration
   - BulletLaserWall
   - Death
+  - BomberMan
   layers:
   - Default
   - TransparentFX
