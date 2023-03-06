@@ -453,7 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 3885096071207690160}
   variableJoystick: {fileID: 0}
-  moveSpeed: 0.02
+  moveSpeed: 0.04
   rotationSpeed: 1
   anim: {fileID: 3885096071207690159}
 --- !u!54 &3885096071207690158
@@ -474,7 +474,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!95 &3885096071207690159
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -491,7 +491,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!136 &781785653288896593
 CapsuleCollider:
   m_ObjectHideFlags: 0

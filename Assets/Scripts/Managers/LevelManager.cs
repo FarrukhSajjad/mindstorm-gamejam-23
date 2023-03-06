@@ -12,6 +12,10 @@ public class LevelManager : MonoBehaviour
 
     public GameObject blastPrefab;
 
+    public GameObject confettiExplosion1;
+    public GameObject confettiExplosion2;
+
+
 
     public static LevelManager Instance;
 
@@ -41,6 +45,8 @@ public class LevelManager : MonoBehaviour
     {
         currentLevelToLoad = PlayerPrefs.GetInt(PlayerPrefsHelper.LevelToLoad);
 
+        Debug.Log("Current Level To Load: " + currentLevelToLoad);
+
         if(currentLevelToLoad < levels.Length)
         {
             currentLevel = Instantiate(levels[currentLevelToLoad]);
@@ -56,10 +62,12 @@ public class LevelManager : MonoBehaviour
     {
         currentLevelToLoad++;
         PlayerPrefs.SetInt(PlayerPrefsHelper.LevelToLoad, currentLevelToLoad++);
+        Debug.Log("HH666");
     }
 
     public void OnLevelFailedEvent()
     {
         UIManager.Instance.levelFailedPanel.SetActive(true);
+        UIManager.Instance.gameplayPanel.SetActive(false);
     }
 }

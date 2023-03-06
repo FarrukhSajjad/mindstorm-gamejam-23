@@ -87,5 +87,6 @@ public class PatrolOfficer : MonoBehaviour
     private void InvokeLevelFailed()
     {
         UIManager.Instance.levelFailedPanel.SetActive(true);
+        UIManager.Instance.gameplayPanel.SetActive(false);
     }
 }

@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
     private void DelayInLevelFailed()
     {
         UIManager.Instance.levelFailedPanel.SetActive(true);
+        UIManager.Instance.gameplayPanel.SetActive(false);
     }
 
     private void RemoveItemsFromInventory()
