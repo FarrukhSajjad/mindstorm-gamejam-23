@@ -10,11 +10,11 @@ public class UIManager : MonoBehaviour
 
     public Transform gridContent;
 
-    public GameObject controllerPanel;
-
     public Transform eggGridContent;
 
     public GameObject levelCompletedPanel, levelFailedPanel, gamecompletedPanel, tutorialPanel, settingsPanel, bomberTutorialPanel;
+
+    public VariableJoystick variableJoystick;
 
     [Space(10)]
     [Header("Buttons")]
@@ -34,15 +34,6 @@ public class UIManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
-        }
-    }
-
-    private void Update()
-    {
-        if(Input.touchCount > 0)
-        {
-            //if (Level.Instance.isTutorialLevel) return;
-            controllerPanel.SetActive(false);
         }
     }
 
@@ -70,7 +61,7 @@ public class UIManager : MonoBehaviour
 
     public void OnLetsGoButtonPressed()
     {
-        PlayerMovement.instance.gameObject.GetComponent<PlayerMovement>().enabled = true;
+        NewPlayerController.Instance.gameObject.GetComponent<NewPlayerController>().enabled = true;
         Level.Instance.isTutorialLevel = false;
 
         AudioManager.instance.PlayClickSfx();

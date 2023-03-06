@@ -16,7 +16,7 @@ public class LevelCompletedTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerMovement>().enabled = false;
+            other.gameObject.GetComponent<NewPlayerController>().enabled = false;
             other.gameObject.GetComponent<Animator>().enabled = false;
         }
     }

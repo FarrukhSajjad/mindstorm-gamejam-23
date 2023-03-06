@@ -39,6 +39,8 @@ public class AudioManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+
+        lightingSound.Stop();
        
     }
 
