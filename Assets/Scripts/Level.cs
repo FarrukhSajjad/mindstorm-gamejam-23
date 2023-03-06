@@ -32,6 +32,8 @@ public class Level : MonoBehaviour
     {
         AudioManager.instance.lightingSound.Stop();
 
+        AudioManager.instance.lightingSound.mute = false;
+
         Instantiate(LevelManager.Instance.playerToSpawnInLevel, playerSpawnPoint.position, Quaternion.identity);
         //LevelManager.Instance.cameraFollow.enabled = true;
         //Invoke(nameof(SetChaseSpeed), 1f);

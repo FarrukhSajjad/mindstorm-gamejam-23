@@ -6945,7 +6945,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 0, y: 300, z: 0}
+  endValueV3: {x: 0, y: 450, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -7829,6 +7829,7 @@ MonoBehaviour:
   - {fileID: 3900269934552442888, guid: 97f26b6ce8157d647980ac08ed6abab5, type: 3}
   - {fileID: 1626818357061727277, guid: a5b2e0b07b4861e419fd2c2b1f650bb6, type: 3}
   - {fileID: 3340180702925067819, guid: c4dac17e2f1858b4086fe1e0af8c8624, type: 3}
+  - {fileID: 2566590421231535961, guid: 39f6749cc6f7f6f4f95dc6365eed17c8, type: 3}
   currentLevel: {fileID: 0}
   currentLevelToLoad: 0
   playerToSpawnInLevel: {fileID: 683872034291516896, guid: c221c38330c9fcc489f45fbd01e9b0a3, type: 3}
@@ -39120,7 +39121,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 0, y: 300, z: 0}
+  endValueV3: {x: 0, y: 450, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 

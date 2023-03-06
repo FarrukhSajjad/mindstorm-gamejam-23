@@ -92,4 +92,20 @@ public class PatrolOfficer : MonoBehaviour
 
         AudioManager.instance.lightingSound.mute = true;
     }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if(collision.gameObject.tag == "Death")
+        {
+            Debug.Log("HH Death");
+            Instantiate(LevelManager.Instance.blastPrefab, this.gameObject.transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+
+        }
+    }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+        
+    //}
 }
