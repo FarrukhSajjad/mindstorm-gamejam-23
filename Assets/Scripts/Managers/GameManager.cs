@@ -79,6 +79,8 @@ public class GameManager : MonoBehaviour
         {
             //UIManager.Instance.levelFailedPanel.SetActive(true);
             Invoke(nameof(DelayInLevelFailed), 0.5f);
+
+            
         }
 
     }
@@ -87,6 +89,7 @@ public class GameManager : MonoBehaviour
     {
         UIManager.Instance.levelFailedPanel.SetActive(true);
         UIManager.Instance.gameplayPanel.SetActive(false);
+        AudioManager.instance.levelFailedSound.Play();
     }
 
     private void RemoveItemsFromInventory()

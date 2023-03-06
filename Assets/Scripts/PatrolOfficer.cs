@@ -88,5 +88,6 @@ public class PatrolOfficer : MonoBehaviour
     {
         UIManager.Instance.levelFailedPanel.SetActive(true);
         UIManager.Instance.gameplayPanel.SetActive(false);
+        AudioManager.instance.levelFailedSound.Play();
     }
 }

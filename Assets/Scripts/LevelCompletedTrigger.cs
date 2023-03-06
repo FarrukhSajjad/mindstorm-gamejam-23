@@ -13,7 +13,7 @@ public class LevelCompletedTrigger : MonoBehaviour
             if (onlyOnce) return;
             LevelManager.Instance.confettiExplosion1.SetActive(true);
             LevelManager.Instance.confettiExplosion2.SetActive(true);
-
+            AudioManager.instance.levelCompleteSound.Play();
             Invoke(nameof(DelayInLevelComplete), 1f);
             Debug.Log("HH111");
             onlyOnce = true;

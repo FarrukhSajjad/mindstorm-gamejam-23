@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource playerDeathSound;
     public AudioSource eggCollectionComplete;
     public AudioSource lightingSound;
+    public AudioSource levelCompleteSound;
+    public AudioSource levelFailedSound;
 
     public static AudioManager instance;
 
