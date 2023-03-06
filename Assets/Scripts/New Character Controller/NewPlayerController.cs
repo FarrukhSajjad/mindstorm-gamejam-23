@@ -127,11 +127,11 @@ public class NewPlayerController : MonoBehaviour
 
             other.gameObject.transform.SetParent(UIManager.Instance.eggGridContent.GetChild(inventoryCount));
 
-            other.gameObject.GetComponent<Animation>().enabled = false;
+            other.gameObject.GetComponent<Animator>().enabled = false;
 
             other.gameObject.transform.localPosition = new Vector3(0, 0, 0);
 
-            StartCoroutine(LerpScaling(other.gameObject.transform.localScale, new Vector3(130, 130, 130), other.gameObject, false));
+            StartCoroutine(LerpScaling(other.gameObject.transform.localScale, new Vector3(415, 415, 415), other.gameObject, false));
 
             other.gameObject.GetComponent<Balloon>().particlesToEnable.SetActive(true);
 

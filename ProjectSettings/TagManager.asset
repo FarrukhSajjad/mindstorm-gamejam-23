@@ -12,6 +12,8 @@ TagManager:
   - BulletLaserWall
   - Death
   - BomberMan
+  - Egg1
+  - Egg2
   layers:
   - Default
   - TransparentFX

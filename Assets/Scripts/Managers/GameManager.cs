@@ -90,6 +90,8 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.levelFailedPanel.SetActive(true);
         UIManager.Instance.gameplayPanel.SetActive(false);
         AudioManager.instance.levelFailedSound.Play();
+        AudioManager.instance.lightingSound.mute = true;
+
     }
 
     private void RemoveItemsFromInventory()

@@ -54,6 +54,8 @@ public class LevelManager : MonoBehaviour
         else
         {
             UIManager.Instance.gamecompletedPanel.SetActive(true);
+
+            AudioManager.instance.lightingSound.mute = true;
         }
 
     }
@@ -63,6 +65,8 @@ public class LevelManager : MonoBehaviour
         currentLevelToLoad++;
         PlayerPrefs.SetInt(PlayerPrefsHelper.LevelToLoad, currentLevelToLoad++);
         Debug.Log("HH666");
+
+        AudioManager.instance.lightingSound.mute = true;
     }
 
     public void OnLevelFailedEvent()
@@ -70,5 +74,7 @@ public class LevelManager : MonoBehaviour
         UIManager.Instance.levelFailedPanel.SetActive(true);
         UIManager.Instance.gameplayPanel.SetActive(false);
         AudioManager.instance.levelFailedSound.Play();
+
+        AudioManager.instance.lightingSound.mute = true;
     }
 }
