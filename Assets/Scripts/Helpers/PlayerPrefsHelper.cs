@@ -4,4 +4,5 @@ public class PlayerPrefsHelper
     public static string Music = "Music";
     public static string Vibration = "Vibration";
     public static string LevelToLoad = "LevelToLoad";
+    public static string TestHelper = "TestHelper";
 }
