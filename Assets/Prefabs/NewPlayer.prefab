@@ -453,7 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 3885096071207690160}
   variableJoystick: {fileID: 0}
-  moveSpeed: 0.04
+  moveSpeed: 0.01
   rotationSpeed: 1
   anim: {fileID: 3885096071207690159}
 --- !u!54 &3885096071207690158
